@@ -22,5 +22,5 @@ jobs:
         with:
           python-version: 3.7
       - name: execute py script
-        run: python main.py
+        run: python helloworld.py
       
