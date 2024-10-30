@@ -17,5 +17,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
-      - name: say hi
+      - name: say hi on shell
+        run: echo "Hi, I'm $nombre"
+      - name: say hi on python with argument
         run: python hello-params.py "Eva"
