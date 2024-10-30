@@ -18,4 +18,4 @@ jobs:
         with:
           python-version: 3.7
       - name: say hi
-        run: echo "Hi, I'm $nombre"
+        run: python hello-params.py "Eva"
