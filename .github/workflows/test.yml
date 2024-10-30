@@ -13,9 +13,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:        
-        python-version: [3.7, 3.8] # Set the python versions to be installed and run of
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: checkout repo
@@ -23,7 +20,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.7
       - name: execute py script
         run: python main.py
       
