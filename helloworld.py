@@ -1,4 +1,4 @@
 def PrintOut(string):
     print(string)
 
-PrintOut('Hello World!')
+PrintOut('¡Hola mundo!')
