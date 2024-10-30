@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Hello world python!
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+env:
+  nombre: "EVA"
+jobs:
+  my-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: say hi
+        run: echo "Hi, I'm $nombre"
