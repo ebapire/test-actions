@@ -1,0 +1,19 @@
+name: Hello world every hour
+
+# Controls when the workflow will run
+on:
+ schedule:
+    - cron: "0 0-23 * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: execute py script
+        run: python helloworld.py
