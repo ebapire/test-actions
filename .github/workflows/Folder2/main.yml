@@ -1,0 +1,13 @@
+name: Use secret has param on Folder2
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+jobs:
+  secret:
+    runs-on: ubuntu-latest
+    steps:      
+      - name: secret
+        env:
+          USER: ${{ vars.USER }}
+        run: echo "Hi, I'm "$USER""
